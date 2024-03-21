@@ -1,0 +1,410 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/*12 grid*/
+.layout {
+  border: 2px solid black;
+  display: grid;
+  grid:
+    " span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 " 1fr "span6 span6 span6 span6 span6 span6 . . . . . . " 1fr ". . . . . span3 span3 span3 . . . ." 1fr ". . . . span1 . . . . . . ." 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.span12 {
+  grid-area: span12;
+  background-color: #e60a20ff;
+}
+
+.span6 {
+  grid-area: span6;
+  background-color: #ed0202ff;
+}
+
+.span3 {
+  grid-area: span3;
+  background-color: #ed0202ff;
+}
+
+.span1 {
+  grid-area: span1;
+  background-color: #ed0202ff;
+}
+
+/*3x3*/
+.layout2 {
+  border: 2px solid black;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.x3 {
+  background-color: #04d7d3;
+  border: 2px solid #b116e9;
+}
+
+/*Holy grail*/
+.layout3 {
+  border: 2px solid black;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid:
+    "header header header" auto "leftSide body rightSide" 1fr "footer footer footer" auto / auto 1fr auto;
+  gap: 5px;
+}
+
+.header {
+  grid-area: header;
+  background-color: #1254d9ff;
+}
+
+.leftSide {
+  grid-area: leftSide;
+  background-color: #09c350ff;
+}
+
+.rightSide {
+  grid-area: rightSide;
+  background-color: #c3094aff;
+}
+
+.body {
+  grid-area: body;
+  background-color: #e17014ff;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #ad0fe6ff;
+}
+
+/*Sidebar*/
+.layout4 {
+  border: 2px solid black;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid:
+    "sidebar body1" 1fr / auto 1fr;
+  gap: 5px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #e41111ff;
+}
+
+.body1 {
+  grid-area: body1;
+  background-color: #3b0de3ff;
+}
+
+/*Header Main footer*/
+.layout5 {
+  border: 2px solid black;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid:
+    "header1" auto "main" 1fr "footer1" auto / 1fr;
+  gap: 5px;
+}
+
+.header1 {
+  grid-area: header1;
+  background-color: #14aecc;
+}
+
+.main {
+  grid-area: main;
+  background-color: #0dded0;
+}
+
+.footer1 {
+  grid-area: footer1;
+  background-color: #14d2ac;
+}
+
+/*Infinite rows*/
+.layout6 {
+  border: 2px solid black;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
+  gap: 5px;
+}
+
+.box {
+  border: 1px soild #bd0505;
+  background-color: #0092db;
+}
+
+/*Infinite Rows with areas*/
+.layout7 {
+  border: 2px solid black;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
+  gap: 5px;
+}
+
+.col1Last1 {
+  grid-column: 1/-1;
+}
+
+/*Flexbox Rows*/
+.layout8 {
+  border: 2px solid #db0606;
+  background-color: #10eac5ff;
+  display: flex;
+  gap: 10px;
+}
+
+/*Flexbox Row Wrap*/
+.layout9 {
+  border: 2px solid black;
+  background-color: #830ae6ff;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/*Flexbox Fill Space*/
+.layout10 {
+  border: 2px solid black;
+  background-color: #eb0a0aff;
+  display: flex;
+  gap: 10px;
+}
+
+.grow1 {
+  flex-grow: 1;
+}
+
+/*Flexbox Fill remaining space*/
+.layout11 {
+  border: 2px solid black;
+  background-color: #ad0fe6ff;
+  display: flex;
+  gap: 10px;
+}
+
+/*Flexbox Seperate*/
+.layout12 {
+  border: 2px solid black;
+  background-color: #ed121dff;
+  display: flex;
+  gap: 10px;
+}
+
+.marginLeft {
+  margin-left: auto;
+}
+
+/*Your Own*/
+.layout13 {
+  border: 2px solid black;
+  background-color: #a206eaff;
+  width: 99%;
+  height: 200px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+}
+
+
+/*Animations*/
+/* 2 D animation X and Y axis */
+#twoD {
+  border: 3px dashed #eb0a0aff;
+  background-color: #0dd9d5ff;
+}
+
+/* Translate Method*/
+.trans:hover {
+  transform: translate(50px, 100px);
+}
+
+/* Translate X Method*/
+.trans:hover {
+  transform: translate(50px);
+}
+
+/* Translate Y Method*/
+.trans:hover {
+  transform: translate(100px);
+}
+
+/* Rotate Method*/
+#rotate:hover {
+  transform: rotate(20deg);
+}
+
+/* Rotate  X Method*/
+#rotateX:hover {
+  transform: rotate(180deg);
+}
+
+/* Rotate  Y Method*/
+#rotateY:hover {
+  transform: rotate(180deg);
+}
+
+/* Scale Method*/
+#scale:hover {
+  transform: scale(2, 3);
+}
+
+/* Scale X Method*/
+#scaleX:hover {
+  transform: scale(2);
+}
+
+/* Scale Y Method*/
+#scaleY:hover {
+  transform: scale(3);
+}
+
+/* Skew Method */
+#skew:hover {
+  transform: skew(20deg, 20deg);
+}
+
+/* Skew X Method */
+#skewX:hover {
+  transform: skewX(20deg);
+}
+
+/* Skew Y Method */
+#skewY:hover {
+  transform: skewY(20deg);
+}
+
+/* Matrix Method */
+/* matrix(scaleX, skewY, skewX, scaleY, transleX, translateY*/
+#matrix:hover {
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+
+#matrix2:hover {
+  transform: matrix(1, 0, 0.5, 1, 150, 0);
+}
+#YouOwnMatrix3:hover{
+  transform: matrix(1, 0, 4.5, 1, 160, 0);
+}
+#threeD{
+  border: 3px dotted #37ea06ff;
+  background-color: #de600dff;
+}
+/* rotate 3D method*/
+#trans3D:hover{
+  transform: translate3D(50px, 10px, 150px);
+}
+/* rotate 3D method*/
+#rotateZ:hover{
+  transform: rotateZ(90deg);
+}
+/*
+transition
+transition-delay
+transition-duraion
+transition-property
+transition-timing function
+*/
+#transittions{
+  border:3px solid #2008d9ff;
+  background-color: #db0606ff;
+}
+.box1{
+  width: 50px;
+  height: 50px;
+  background-color: #0ae623ff;
+  border: 1px solid #e60f97ff;
+  transition: width 2s, height 2s, backgroud-color 2s, border 2s;
+}
+
+#transittion:hover{
+  width: 100px;
+  height: 100px;
+  background-color: #ad0fe6ff;
+}
+#delay{
+  transition: width 2s;
+  transition-delay: 1s;
+}
+#delay:hover{
+  width: 100px;
+}
+#duration{
+  transition: width 2s;
+  transition-duration: 4s;
+}
+#duration:hover{
+  width: 100px;
+}
+#propert{
+  transition-property:  width;
+}
+#propert:hover{
+  width: 100px;
+}
+#timing{
+  transition-timing-function: linear ;
+}
+#timing:hover{
+  width: 100px;
+}
+
+#animations{
+  background-color: red;
+  border: 3px dashed #5ce302ff;
+}
+#animate{
+  animation-name: example;
+  animation-duration: 10s;
+}
+@keyframes example{
+  from{background-color: #0f1bbdff;}
+  to{background-color: #0feb29ff;}
+}
+#animate2{
+  animation-name: sample;
+  animation-duration: 10s;
+
+}
+@keyframes sample{
+  0%{background-color: #0f1bbdff;}
+  25%{background-color: #e203b9ff;}
+  50%{background-color: #09c4dcff;}
+  75%{background-color: #ebce0fff;}
+  100%{background-color: #e40767ff;}
+}
+
+#animate3{
+  position: relative;
+  animation-name: allOver;
+  animation-duration: 2s;
+  animation-iteration-count:20;
+}
+@keyframes allOver{
+  0%{background-color: #0f1bbdff;  left: 0px; top: 0px;}
+  25%{background-color: #e203b9ff; left: 200px; top: 0px;}
+  50%{background-color: #09c4dcff; left: 200px; top: 200px;}
+  75%{background-color: #ebce0fff; left: 0px; top: 200px;}
+  100%{background-color: #e40767ff;left: 0px; top: 0px;}
+}
+/* prespective Method*/
+/* Matrix 3D method*/
+/* */
+/* */
